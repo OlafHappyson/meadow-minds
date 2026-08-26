@@ -72,6 +72,15 @@ ul.plain li{padding:.55rem 0; border-bottom:1px solid rgba(56,71,60,.5); color:v
 ul.plain li:last-child{border-bottom:none}
 ul.plain b{color:var(--ink); font-weight:600}
 
+.shots{display:grid; grid-template-columns:repeat(2,1fr); gap:.75rem; margin-top:1.5rem}
+.shots figure{margin:0; border:1px solid var(--line); border-radius:10px; overflow:hidden; background:var(--panel-soft)}
+.shots img{display:block; width:100%; height:auto}
+.shots figcaption{padding:.55rem .8rem; font-size:.83rem; color:var(--ink-dim)}
+.shots .wide{grid-column:1 / -1}
+@media (max-width:34rem){ .shots{grid-template-columns:1fr} }
+.species{margin-top:1.25rem; border:1px solid var(--line); border-radius:10px; overflow-x:auto}
+.species img{display:block; height:88px; width:auto; min-width:100%}
+
 footer{margin-top:4rem; padding-top:1.5rem; border-top:1px solid var(--line); color:var(--ink-dim); font-size:.86rem}
 </style>
 </head>
@@ -84,6 +93,10 @@ footer{margin-top:4rem; padding-top:1.5rem; border-top:1px solid var(--line); co
   <p class="tagline">Postav louku, vlož do ní zvířata a čti, o čem přemýšlejí.
     Není co vyhrát — je co pozorovat.</p>
 </header>
+
+<figure class="hero" style="margin:0 0 3rem; border:1px solid var(--line); border-radius:12px; overflow:hidden; box-shadow:var(--shadow)">
+  <img src="img/01-stado.jpg" alt="Stádo divokých koní v různém zbarvení se pase na ranní louce" style="display:block;width:100%;height:auto">
+</figure>
 
 <h2>Stáhnout</h2>
 <p style="color:var(--ink-dim);margin-top:.75rem">Vývojový build. Nic se neinstaluje, stačí rozbalit a spustit.</p>
@@ -133,6 +146,39 @@ footer{margin-top:4rem; padding-top:1.5rem; border-top:1px solid var(--line); co
 <p>Zvláštní na tom je, že vidíš zvířeti <b>do hlavy</b>: v pravém panelu běží jeho úvaha —
 co právě zvažuje, jak si to boduje, co vidí, cítí a slyší, co si pamatuje a čeho se bojí.
 Když husa uteče, dá se dohledat proč.</p>
+
+<h2>Ze hry</h2>
+<div class="shots">
+  <figure class="wide">
+    <img src="img/04-mysl.jpg" alt="Rozhraní hry: vpravo běží úvaha vybraného zvířete, vlevo katalog druhů a prostředí" loading="lazy">
+    <figcaption>Pravý panel je jádro hry: vidíš, co zvíře zvažuje, jak si to boduje a proč se rozhodlo utéct.</figcaption>
+  </figure>
+  <figure>
+    <img src="img/02-rybnik.jpg" alt="Husy plavou na rybníku, v pozadí se pase stádo krav" loading="lazy">
+    <figcaption>Husy na rybníku. Voda je pro ně útočiště — liška za nimi nepůjde.</figcaption>
+  </figure>
+  <figure>
+    <img src="img/03-kopec.jpg" alt="Jelen stojí na vrcholu kopce, pod ním se pase kůň" loading="lazy">
+    <figcaption>Z kopce je dál vidět. Zvířata to vědí a chodí se tam rozhlížet.</figcaption>
+  </figure>
+  <figure>
+    <img src="img/05-zima.jpg" alt="Krávy stojí ve sněhu na zimní louce" loading="lazy">
+    <figcaption>Rok trvá šestnáct dnů. V zimě zamrzne rybník a tráva přestane růst.</figcaption>
+  </figure>
+  <figure>
+    <img src="img/06-svitani.jpg" alt="Padlá kláda přes potok za svítání" loading="lazy">
+    <figcaption>Padlá kláda přes potok — jediná cesta pro toho, kdo neumí plavat.</figcaption>
+  </figure>
+</div>
+
+<h2>Kdo na louce žije</h2>
+<div class="species">
+  <img src="img/druhy.jpg" alt="Ikony druhů: jelen, kůň divoký, kráva, prase, husa, zajíc, králík, holub, sojka, vlk, liška, kočka" loading="lazy">
+</div>
+<p style="color:var(--ink-dim);font-size:.9rem;margin-top:.6rem">
+  Jelen, kůň divoký, kráva, prase, husa, zajíc, králík, holub a sojka — a proti nim vlk, liška a kočka.
+  Každý druh má vlastní smysly, rychlost, potravu a strach z ostatních.
+</p>
 
 <h2>Ovládání</h2>
 <ul class="plain">
