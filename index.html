@@ -74,7 +74,7 @@ ul.plain b{color:var(--ink); font-weight:600}
 
 .shots{display:grid; grid-template-columns:repeat(2,1fr); gap:.75rem; margin-top:1.5rem}
 .shots figure{margin:0; border:1px solid var(--line); border-radius:10px; overflow:hidden; background:var(--panel-soft)}
-.shots img{display:block; width:100%; height:auto}
+.shots img,.shots video{display:block; width:100%; height:auto; background:#0E1411}
 .shots figcaption{padding:.55rem .8rem; font-size:.83rem; color:var(--ink-dim)}
 .shots .wide{grid-column:1 / -1}
 @media (max-width:34rem){ .shots{grid-template-columns:1fr} }
@@ -150,11 +150,15 @@ Když husa uteče, dá se dohledat proč.</p>
 <h2>Ze hry</h2>
 <div class="shots">
   <figure class="wide">
-    <img src="img/04-mysl.jpg" alt="Rozhraní hry: vpravo běží úvaha vybraného zvířete, vlevo katalog druhů a prostředí" loading="lazy">
+    <video src="img/klip-mysl.mp4" poster="img/klip-mysl-poster.jpg" autoplay muted loop playsinline></video>
     <figcaption>Pravý panel je jádro hry: vidíš, co zvíře zvažuje, jak si to boduje a proč se rozhodlo utéct.</figcaption>
   </figure>
   <figure>
-    <img src="img/02-rybnik.jpg" alt="Husy plavou na rybníku, v pozadí se pase stádo krav" loading="lazy">
+    <video src="img/klip-stado.mp4" poster="img/klip-stado-poster.jpg" autoplay muted loop playsinline></video>
+    <figcaption>Stádo divokých koní. Každý kus má vlastní zbarvení a drží si od ostatních odstup.</figcaption>
+  </figure>
+  <figure>
+    <video src="img/klip-rybnik.mp4" poster="img/klip-rybnik-poster.jpg" autoplay muted loop playsinline></video>
     <figcaption>Husy na rybníku. Voda je pro ně útočiště — liška za nimi nepůjde.</figcaption>
   </figure>
   <figure>
@@ -165,7 +169,7 @@ Když husa uteče, dá se dohledat proč.</p>
     <img src="img/05-zima.jpg" alt="Krávy stojí ve sněhu na zimní louce" loading="lazy">
     <figcaption>Rok trvá šestnáct dnů. V zimě zamrzne rybník a tráva přestane růst.</figcaption>
   </figure>
-  <figure>
+  <figure class="wide">
     <img src="img/06-svitani.jpg" alt="Padlá kláda přes potok za svítání" loading="lazy">
     <figcaption>Padlá kláda přes potok — jediná cesta pro toho, kdo neumí plavat.</figcaption>
   </figure>
