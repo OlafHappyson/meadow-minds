@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Hide: Meadow Minds — stažení</title>
+<meta name="description" content="Posed: Mysl louky — pozorovací simulátor chování zvířat. Postav louku, vlož do ní zvířata a čti, o čem přemýšlejí.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap">
+<style>
+:root{
+  --ink:#E8EFE3; --ink-dim:#9FB09C; --accent:#C3DA76; --accent-warm:#E0B15A;
+  --panel:#161E1A; --panel-soft:#1D2721; --line:#38473C; --ground:#0E1411;
+  --shadow:0 10px 30px rgba(0,0,0,.45);
+}
+*{box-sizing:border-box}
+body{
+  margin:0; background:var(--ground); color:var(--ink);
+  font:16px/1.65 Inter,-apple-system,Segoe UI,Roboto,sans-serif;
+  background-image:radial-gradient(1100px 520px at 50% -8%, #1c2a1e 0%, transparent 62%);
+}
+.wrap{max-width:74ch; margin:0 auto; padding:clamp(2.5rem,7vw,5rem) 1.25rem 5rem}
+header{text-align:center; margin-bottom:3.5rem}
+h1{
+  font-family:Bitter,Georgia,serif; font-weight:600; text-wrap:balance;
+  font-size:clamp(2rem,6vw,3.1rem); line-height:1.12; margin:0 0 .35rem;
+}
+h1 .sub{display:block; font-size:.44em; font-style:italic; font-weight:400; color:var(--accent); margin-top:.5rem}
+.tagline{color:var(--ink-dim); max-width:48ch; margin:1.25rem auto 0; text-wrap:pretty}
+h2{
+  font-family:Bitter,Georgia,serif; font-size:1.25rem; font-weight:600;
+  margin:3.5rem 0 1rem; padding-bottom:.5rem; border-bottom:1px solid var(--line);
+}
+h3{font-size:.98rem; font-weight:600; margin:0 0 .3rem}
+a{color:var(--accent)}
+
+.downloads{display:grid; gap:.85rem; margin-top:2rem}
+.dl{
+  display:flex; align-items:center; gap:1rem; text-decoration:none; color:inherit;
+  background:var(--panel-soft); border:1px solid var(--line); border-radius:12px;
+  padding:1rem 1.15rem; box-shadow:var(--shadow); transition:border-color .15s, transform .15s;
+}
+.dl:hover,.dl:focus-visible{border-color:var(--accent); transform:translateY(-1px)}
+.dl:focus-visible{outline:2px solid var(--accent); outline-offset:3px}
+.dl .os{font-family:Bitter,Georgia,serif; font-size:1.05rem}
+.dl .meta{color:var(--ink-dim); font-size:.85rem; font-variant-numeric:tabular-nums}
+.dl .grow{flex:1; min-width:0}
+.dl .go{color:var(--accent); font-weight:600; white-space:nowrap}
+.glyph{
+  width:38px; height:38px; flex:none; display:grid; place-items:center;
+  border-radius:9px; background:#121A15; border:1px solid var(--line); color:var(--accent);
+}
+
+.note{
+  background:var(--panel); border:1px solid var(--line); border-left:3px solid var(--accent-warm);
+  border-radius:9px; padding:1rem 1.15rem; margin:1rem 0;
+}
+.note p{margin:.4rem 0 0; color:var(--ink-dim); font-size:.92rem}
+code{
+  font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:.86em;
+  background:#101711; border:1px solid var(--line); border-radius:5px; padding:.12em .42em;
+}
+pre{
+  background:#101711; border:1px solid var(--line); border-radius:9px;
+  padding:.85rem 1rem; overflow-x:auto; font-size:.86rem; margin:.6rem 0 0;
+}
+pre code{background:none; border:none; padding:0}
+
+ul.plain{list-style:none; padding:0; margin:0}
+ul.plain li{padding:.55rem 0; border-bottom:1px solid rgba(56,71,60,.5); color:var(--ink-dim)}
+ul.plain li:last-child{border-bottom:none}
+ul.plain b{color:var(--ink); font-weight:600}
+
+footer{margin-top:4rem; padding-top:1.5rem; border-top:1px solid var(--line); color:var(--ink-dim); font-size:.86rem}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>The Hide: Meadow Minds
+    <span class="sub">Posed: Mysl louky</span></h1>
+  <p class="tagline">Postav louku, vlož do ní zvířata a čti, o čem přemýšlejí.
+    Není co vyhrát — je co pozorovat.</p>
+</header>
+
+<h2>Stáhnout</h2>
+<p style="color:var(--ink-dim);margin-top:.75rem">Vývojový build. Nic se neinstaluje, stačí rozbalit a spustit.</p>
+
+<div class="downloads">
+  <a class="dl" href="https://github.com/OlafHappyson/meadow-minds/releases/latest/download/TheHide-win64.zip">
+    <span class="glyph" aria-hidden="true">▣</span>
+    <span class="grow">
+      <h3 class="os">Windows</h3>
+      <span class="meta">64bit · ZIP · ~47 MB</span>
+    </span>
+    <span class="go">Stáhnout →</span>
+  </a>
+  <a class="dl" href="https://github.com/OlafHappyson/meadow-minds/releases/latest/download/TheHide-macos.zip">
+    <span class="glyph" aria-hidden="true">◧</span>
+    <span class="grow">
+      <h3 class="os">macOS</h3>
+      <span class="meta">Apple Silicon i Intel · ZIP · ~69 MB</span>
+    </span>
+    <span class="go">Stáhnout →</span>
+  </a>
+  <a class="dl" href="https://github.com/OlafHappyson/meadow-minds/releases/latest/download/TheHide-linux-x86_64.tar.gz">
+    <span class="glyph" aria-hidden="true">◨</span>
+    <span class="grow">
+      <h3 class="os">Linux</h3>
+      <span class="meta">x86-64 · tar.gz · ~37 MB</span>
+    </span>
+    <span class="go">Stáhnout →</span>
+  </a>
+</div>
+
+<div class="note">
+  <h3>Než to spustíš</h3>
+  <p><b>Windows</b> — build není podepsaný, takže SmartScreen hlásí neznámého vydavatele.
+     Klikni na <em>Další informace</em> → <em>Přesto spustit</em>.</p>
+  <p><b>macOS</b> — aplikace není notarizovaná a systém ji po stažení zablokuje (může tvrdit,
+     že je „poškozená“ — není). Sundej karanténní značku:</p>
+  <pre><code>xattr -dr com.apple.quarantine ~/Downloads/TheHide.app</code></pre>
+  <p><b>Linux</b> — kdyby to hlásilo <code>Permission denied</code>, chybí právo ke spuštění:
+     <code>chmod +x TheHide.x86_64</code>. Potřebuje ovladače s Vulkanem; bez nich zkus
+     <code>./TheHide.x86_64 --rendering-driver opengl3</code>.</p>
+</div>
+
+<h2>Co to je</h2>
+<p>Zero-player simulátor chování zvířat. Nesbíráš body a nikam nepostupuješ — stavíš louku
+(kopce, rybníky, potoky, lesíky, krmítka), vkládáš do ní zvířata a pak sleduješ, co se stane.</p>
+<p>Zvláštní na tom je, že vidíš zvířeti <b>do hlavy</b>: v pravém panelu běží jeho úvaha —
+co právě zvažuje, jak si to boduje, co vidí, cítí a slyší, co si pamatuje a čeho se bojí.
+Když husa uteče, dá se dohledat proč.</p>
+
+<h2>Ovládání</h2>
+<ul class="plain">
+  <li><b>WASD</b> posun kamery · <b>kolečko</b> přiblížení · <b>Q/E</b> otáčení</li>
+  <li><b>klik na zvíře</b> výběr · <b>Esc</b> zrušení · <b>V</b> pohled očima zvířete</li>
+  <li><b>H</b> fotorežim (schová panely) · <b>Ctrl+Z</b> zpět</li>
+  <li><b>Shift + kolečko</b> velikost vkládaného prvku</li>
+</ul>
+
+<h2>Co je nového</h2>
+<p style="color:var(--ink-dim)">Úplný seznam změn je v <a href="CHANGELOG.md">changelogu</a>.</p>
+
+<footer>
+  <p>Modely zvířat: <a href="https://quaternius.com">Quaternius</a>, licence CC0.
+     Zvuk je syntetizovaný, žádné nahrávky.</p>
+  <p>Vývojový build — počítej s tím, že se věci mění a uložené hry nemusí přežít další verzi.</p>
+</footer>
+
+</div>
+</body>
+</html>
