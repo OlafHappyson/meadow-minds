@@ -1,5 +1,64 @@
 # Změny
 
+## v0.1.155 — 2026-08-28
+
+Dvacet kroků od minule. Většina práce šla do toho, aby zvířata vypadala živě, i když se zrovna nic neděje — a do tempa, které tomu dá čas.
+
+### Tempo louky
+- **Zvíře u činnosti vydrží.** Předtím měnilo, co dělá, každých devět sekund a „hlídka“ trvala
+  v průměru **jedinou vteřinu** — kůň se za šest dní rozhlédl přes tisíckrát. Ostražitost se
+  totiž naplnila za sedmnáct sekund a vyprázdnila za tři a půl, takže neustále přebila cokoli
+  rozdělaného. Teď má každá činnost svoji nejkratší dobu: průměrný úsek stoupl z 9,7 na
+  **45 sekund**, pastva trvá minutu, odpočinek minutu a čtvrt. Strach to nepřebíjí — před vlkem
+  zvíře uteče kdykoli.
+- **Kořist má konečně čas se najíst.** Ve stejném běhu s vlkem stoupla pastva z 33 na 42 %
+  a pití kleslo z 19 na 8 %. Husy předtím střídaly „hlídám“ a „jdu se napít“ po vteřině
+  a od vody odcházely s poloviční žízní. Na konci běhu přežilo **deset hus místo šesti**.
+- Délka dne a roku se dá nastavit; nejkratší doby činností se řídí jí, takže s delším dnem
+  se prodlouží i klid.
+
+### Animace
+- **Vlastní animace psané kódem.** Balík má na většinu druhů jen dva tři klipy, tak si zbytek
+  doděláváme: dýchání a přenášení váhy, zatřepání hlavou, švihnutí ocasem po mouchách,
+  hrabání kopytem, cukání ušima, protažení, prase ryjící rypákem a rytmus žvýkání při pastvě.
+- **Zvíře, které stojí, něco dělá.** Klidové pózy se střídají nepravidelně, zvíře se rozhlíží,
+  při pastvě okusuje a každých pár vteřin zvedne hlavu. Nejdelší doba úplného bez hnutí klesla
+  u prasete z 11 na necelé 4 sekundy.
+- **Hlava se dívá po tom, co zvíře zaujalo** — po vlkovi, po vodě, po cíli cesty. Míří na něj
+  s odchylkou pod stupeň, zatímco tělo je ještě odkloněné o čtyřicet. Do zatáčky se navíc
+  zvíře prohne v páteři.
+- **Pomalá chůze koně.** Kůň, kráva a prase mají v balíku i pomalou chůzi, kterou jsme
+  nepoužívali — popocházení se hrálo běžnou chůzí natahovanou na strop, takže kůň dělal
+  dvoumetrový krok a ujel při něm pětatřicet centimetrů. Krok navíc navazuje tam, kde skončil,
+  a přechod do klusu má vůli, aby na prahu neblikal.
+- **Kočka** dostala protažení, olizování, švihání ocasem a hlavně natáčení hlavy — do teď
+  jí nefungovalo vůbec, protože její model má kosti bez jmen.
+- **Námluvy a páření.** Páření bylo dosud jediný okamžik simulace, takže se v deníku objevilo
+  mládě jakoby odnikud. Pár teď chvíli zůstane spolu. Hřebec se před klisnou nese s obloukem
+  v krku, jelen se blíží s nízkým nataženým krkem, kočka se otírá.
+- **Husa mává křídly**, když utíká po zemi, při obraně je roztáhne do stran a při námluvách
+  pumpuje hlavou. Zajíc a králík si čistí čumák, panáčkují a cukají ušima; holub a sojka klovou.
+
+### Vzhled
+- **Zvířata se bořila do země** po kotníky — model se posazoval podle nejnižší kosti, jenže pod
+  ní visí ještě kopyto. Teď stojí na zemi.
+- **Barva srsti se konečně používá.** Kůň má v modelu jen dvě plochy a přepočet z nich dělal
+  „břicho“, takže všechny čtyři varianty splývaly do jedné bledé. Hnědák, plavák, bělouš
+  a vraník jsou teď jasně odlišitelní. Srst navíc má stínování — hřbet tmavší, břicho světlejší.
+- **Mrtvé zvíře leží na boku** v kaluži místo hnědé skvrny s kostičkou. Ukládá se i do uložené hry.
+- **Prostředí z hotových modelů**: stromy, keře, kameny a trsy trávy. Les už se nepropadá do louky.
+
+### Hra
+- **Úvodní obrazovka.** Nová louka, Pokračovat, Nastavení, Konec. Před spuštěním si vybereš
+  krajinu, velikost, startovní sadu zvířat a seed — a hned vidíš **živý náhled mapy**, která
+  se spustí.
+- **Nastavení**: celá obrazovka, svislá synchronizace, strop snímků, hlasitost, štítky, smysly,
+  vítr a délka dne i roku. Volby se pamatují.
+- **Životopisy.** U vybraného zvířete je záložka Život: kdy se narodilo, kdy dospělo, kolik
+  přečkalo zim, koho potkalo, o co přišlo.
+- **Louka žije podle toho, kdo po ní chodí.** Stádo vypase dobrou trávu a musí se posunout dál;
+  kde dlouho nikdo nebyl, vyroste vysoká.
+
 ## v0.1.127 — 2026-08-26
 
 Verze je nově číslo kroků vývoje (`0.1.<počet commitů>`) a vidíš ji v rohu horní lišty.
