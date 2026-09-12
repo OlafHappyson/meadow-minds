@@ -1,5 +1,88 @@
 # Změny
 
+## v0.1.160 — 2026-09-12
+
+Na louce přibyly ovce a kozy, velká zvířata se přestala nechat bez odporu lovit a rozhraní
+dostalo kreslenou grafiku. A hlavně: louka se přestala zasekávat.
+
+### Nové druhy
+- **Ovce.** Stádo drží pohromadě jako jeden kus: nikdo nechodí sám k vodě, na nocleh ani na
+  toulky a před vlkem prchají všichni **stejným směrem** místo na všechny strany (poloměr
+  rozprchnutého stáda klesl ze 14 na 4 metry). Zatoulaná ovce se ozve **bečením** a podle
+  odpovědi si stádo najde i přes celou louku — dřív se stádo rozpadlo na čtyři až šest
+  hloučků, teď zůstává jeden. Jehně, které nevidí matku, jde za jejím hlasem.
+- **Koza.** Drží se volněji než ovce a umí dvě věci, které ostatní neumí: **okusuje keře**,
+  takže se nají i tam, kde tráva nestačí, a před vlkem **vyleze na sráz** a zůstane stát
+  nahoře — vlk za ní nevyleze. V dešti jde do úkrytu dřív a rozhodněji, kůzlata první dny
+  leží schovaná.
+- **Nová startovní sada Salaš**: osm ovcí, čtyři kozy a vlk. Šelma ze startovní sady se
+  nově objeví na okraji louky, ne uprostřed stáda.
+- Každý nový druh má **vlastní model pro samici, samce i mládě** — bahnice a beran se
+  zatočenými rohy, koza s kratšími rohy a kozel s bradkou. Rohy jehněti a kůzleti
+  dorůstají s věkem.
+
+### Stádo a lov
+- **Stádo má vůdkyni.** Přesun vede nejstarší klisna nebo laň, hřebec a býk jistí zezadu.
+  Každý druh má navíc osobní rozestup podle toho, jestli se pase nebo odpočívá — tlačenice
+  při pastvě klesla z 45–56 % času na 5–14 %. Matka s mládětem a zesláblý kus se při pastvě
+  posouvají blíž ke středu, kde je bezpečněji.
+- **Velká zvířata se brání.** Krávy se při spatření vlka stáhnou k sobě, postaví se čelem
+  a vyrazí, když jde vlk blízko; telata utíkají za matku. Proti vlkovi jde **hřebec**
+  (nebo odvážná klisna bez hříběte), klisny s hříbaty ustupují na odvrácenou stranu stáda.
+  Laň brání kolouška proti lišce a kočce. Vlk stádo napřed **otestuje** — vyrazí do něj, a když
+  se nikdo neoddělí nebo ho obránci zaženou, ustoupí a ten druh na půl dne nechá být.
+  Za rok na louce klesla úspěšnost vlka u krav z 88 na 62 %, u koní z jednoho úlovku na
+  žádný a celkově ze 48 na 35 %. Krav na konci roku zbylo 30 místo 25.
+- **Vlk se konečně nasytí.** Dřív od úlovku odešel v půlce, mršina zmizela a on šel lovit
+  znovu — za osm dní udělal dvaatřicet úlovků a z deseti krav nezbylo skoro nic. Teď úlovek
+  dojídá do sytosti a **vrací se k němu**, i když je sto metrů daleko: úlovků je devět,
+  krav padne 1,7 místo 7,3. Kořist si taky vybírá podle chuti, ne jen podle vzdálenosti.
+- **Mršina se rozkládá.** Prochází stádii čerstvá → rozežraná → kosti a teprve pak zmizí.
+  Maso ubývá žraním i hnitím podle počasí — v létě zhruba za dva dny, v hluboké zimě až
+  za dvacet. Liška a kočka chodí ožírat, když vlk není nablízku. Býložravci se čerstvé
+  mršině vyhýbají na dvanáct metrů, kosti je už neděsí.
+
+### Rozhraní
+- **Škáluje se s oknem.** V malém okně se rozhraní zmenší celé a nic se nepřekrývá, na velké
+  obrazovce zůstane čitelné. V nastavení je navíc posuvník **Velikost UI**.
+- **Volba rozlišení okna** (1280×720 až 2560×1440). Okno se vycentruje a nikdy nepřeroste
+  plochu obrazovky.
+- **Kreslená grafika**: tlačítka, záložky a ikony horní lišty v bronzovém stylu ikon druhů.
+- Spodní lišta už nezačíná pod levým panelem (z nadpisu „Časová osa“ zbývalo „osa“)
+  a prázdný černý obdélník náhledu druhu je schovaný, dokud si druh nevybereš.
+
+### Vzhled
+- **Skály a balvany**: srázy mají šest nepravidelných vrstev a společný zvětralý kámen,
+  balvanům zmizely díry v povrchu.
+- **Zvíře stojí ve svahu správně** — naklání se podle terénu pod všemi čtyřma, kůň si navíc
+  dorovnává kopyta. Zvíře ve vzduchu se už k zemi nenaklání.
+- **Potoky nejsou řetěz kaluží**, šířka se plynule mění a brod je dost široký na to, aby ho
+  sousední hluboká místa nepřekryla. Rybníky mají mírně nepravidelný břeh.
+- **Jehličnany z vlastních modelů** místo tří kuželů. Přes podzim zůstávají zelené.
+- **Všech dvanáct druhů má vlastní podobu mláděte** — větší hlava proti tělu, kratší uši,
+  menší křídla, kolouch má skvrny, tele nemá vemeno a rohy dorůstají až s dospělostí.
+
+### Výkon
+- **Louka se nezasekává ani s deseti zvířaty.** Ukázalo se, že za to nemohlo přemýšlení
+  zvířat, ale přebarvování trávy — každou půlvteřinu se přepočítávalo dvanáct tisíc bodů
+  louky (28,6 ms, v nejhorším 44,9 ms). Teď to dělá grafická karta za 0,37 ms a louka
+  vypadá stejně.
+- **Simulace je o třetinu až polovinu rychlejší**: krok se 125 zvířaty spadl z 31 na 18 ms.
+  Ve hře to dělá 144 snímků za sekundu s deseti zvířaty a 72 se šedesáti. Chování zvířat
+  se přitom nezměnilo ani o kousek.
+
+### Opravy z hraní
+- **Vymyšlená voda.** Stádo si navzájem „potvrzovalo“ vodu uprostřed louky — stačilo, aby
+  soused vyrazil směrem k rybníku. Zvíře se teď učí jen od toho, kdo opravdu stojí u hladiny,
+  a když na zapamatovaném místě žádná voda není, vzpomínku zahodí. Ovce stávaly se žízní
+  na maximu devadesát metrů od nejbližší vody.
+- **Matka odlétala od hladového mláděte.** Čerstvě vylíhlé mládě bylo tak malé, že se svým
+  hladem nedosáhlo na práh krmení. Teď rozhoduje hlad, ne velikost.
+- **Uložená hra se rozcházela hned prvním krokem** — neukládala se síla poplachu a seznam
+  predátorů, takže po načtení rostl strach pomaleji. Dál se ztrácelo popolétnutí husy,
+  hrabání, cesta na lávku, směr pohledu při hlídce, počet přečkaných zim a zeslábnutí hladem
+  (a v deníku se podruhé objevilo „Dospěla“).
+
 ## v0.1.155 — 2026-08-28
 
 Dvacet kroků od minule. Většina práce šla do toho, aby zvířata vypadala živě, i když se zrovna nic neděje — a do tempa, které tomu dá čas.
