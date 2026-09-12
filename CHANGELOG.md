@@ -1,6 +1,6 @@
 # Změny
 
-## v0.1.160 — 2026-09-12
+## v0.1.192 — 2026-09-12
 
 Na louce přibyly ovce a kozy, velká zvířata se přestala nechat bez odporu lovit a rozhraní
 dostalo kreslenou grafiku. A hlavně: louka se přestala zasekávat.
