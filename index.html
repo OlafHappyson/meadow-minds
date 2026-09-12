@@ -75,6 +75,8 @@ ul.plain b{color:var(--ink); font-weight:600}
 .shots{display:grid; grid-template-columns:repeat(2,1fr); gap:.75rem; margin-top:1.5rem}
 .shots figure{margin:0; border:1px solid var(--line); border-radius:10px; overflow:hidden; background:var(--panel-soft)}
 .shots img,.shots video{display:block; width:100%; height:auto; background:#0E1411}
+.shots img[hidden]{display:none}
+.shot-placeholder{margin:0; padding:2rem 1rem; text-align:center; color:var(--ink-dim); background:var(--ground)}
 .shots figcaption{padding:.55rem .8rem; font-size:.83rem; color:var(--ink-dim)}
 .shots .wide{grid-column:1 / -1}
 @media (max-width:34rem){ .shots{grid-template-columns:1fr} }
@@ -91,7 +93,7 @@ footer{margin-top:4rem; padding-top:1.5rem; border-top:1px solid var(--line); co
   <h1>The Hide: Meadow Minds
     <span class="sub">Posed: Mysl louky</span></h1>
   <p class="tagline">Postav louku, vlož do ní zvířata a čti, o čem přemýšlejí.
-    Není co vyhrát — je co pozorovat.</p>
+    Sleduj, jak se ovce drží stáda a koza hledá útočiště na srázu.</p>
 </header>
 
 <figure class="hero" style="margin:0 0 3rem; border:1px solid var(--line); border-radius:12px; overflow:hidden; box-shadow:var(--shadow)">
@@ -141,13 +143,47 @@ footer{margin-top:4rem; padding-top:1.5rem; border-top:1px solid var(--line); co
 </div>
 
 <h2>Co to je</h2>
-<p>Zero-player simulátor chování zvířat. Nesbíráš body a nikam nepostupuješ — stavíš louku
-(kopce, rybníky, potoky, lesíky, krmítka), vkládáš do ní zvířata a pak sleduješ, co se stane.</p>
+<p>Pozorovací simulátor chování zvířat. Stavíš louku (kopce, rybníky, potoky, lesíky, krmítka),
+vkládáš do ní zvířata a pak sleduješ, co se stane. Začít můžeš i se sadou <b>Salaš</b>:
+ovce, kozy a vlk. Nesbíráš body a nikam nepostupuješ — je tu co pozorovat.</p>
 <p>Zvláštní na tom je, že vidíš zvířeti <b>do hlavy</b>: v pravém panelu běží jeho úvaha —
 co právě zvažuje, jak si to boduje, co vidí, cítí a slyší, co si pamatuje a čeho se bojí.
 Když husa uteče, dá se dohledat proč.</p>
+<p style="color:var(--ink-dim);font-size:.9rem">Stav hry v září 2026, přibližně verze 0.1.160.</p>
+
+<h2>Ovce, kozy a Salaš</h2>
+<p><b>Ovce</b> před nebezpečím prchají pohromadě jedním směrem. Když ovce zůstane sama,
+bečí a stádo si ji najde. Jehně jde za hlasem matky.</p>
+<p><b>Koza</b> okusuje keře. Před vlkem vyleze na sráz a zůstane tam stát;
+vlk pod ní jen chodí. Ve startovní sadě <b>Salaš</b> jsou ovce, kozy a vlk pohromadě,
+takže můžeš sledovat, jak na stejné nebezpečí reagují.</p>
+<p>Přibývají také slepice, kamzík a medvěd.</p>
+<div class="shots">
+  <figure>
+    <img src="img/2026-09-12-salas.jpg" alt="Stádo ovcí a koz na salaši, na obzoru je vlk" loading="lazy" onerror="this.hidden=true; this.nextElementSibling.hidden=false">
+    <p class="shot-placeholder" hidden>Snímek salaše s ovcemi, kozami a vlkem připravujeme.</p>
+    <figcaption>Salaš: startovní sada s ovcemi, kozami a vlkem.</figcaption>
+  </figure>
+  <figure>
+    <img src="img/2026-09-12-koza-skala.jpg" alt="Koza stojí na srázu, pod ní chodí vlk" loading="lazy" onerror="this.hidden=true; this.nextElementSibling.hidden=false">
+    <p class="shot-placeholder" hidden>Snímek kozy na srázu s vlkem pod ní připravujeme.</p>
+    <figcaption>Koza hledá před vlkem útočiště na srázu.</figcaption>
+  </figure>
+</div>
+
+<h2>Rozhraní se přizpůsobí oknu</h2>
+<p>Celé rozhraní se škáluje s velikostí okna. V nastavení si vybereš rozlišení okna
+i velikost rozhraní (UI). Tlačítka a ikony jsou ručně kreslené v bronzovém stylu.</p>
+<div class="shots">
+  <figure class="wide">
+    <img src="img/2026-09-12-rozhrani.jpg" alt="Celá obrazovka hry s novým rozhraním, bronzovými tlačítky a ikonami" loading="lazy" onerror="this.hidden=true; this.nextElementSibling.hidden=false">
+    <p class="shot-placeholder" hidden>Snímek hry s novým rozhraním připravujeme.</p>
+    <figcaption>Nové rozhraní: ručně kreslená tlačítka a ikony, velikost podle nastavení a okna.</figcaption>
+  </figure>
+</div>
 
 <h2>Ze hry</h2>
+<p style="color:var(--ink-dim)">Starší snímky a klipy zachycují další dění na louce. Rozhraní v nich má ještě původní podobu.</p>
 <div class="shots">
   <figure class="wide">
     <video src="img/klip-mysl.mp4" poster="img/klip-mysl-poster.jpg" autoplay muted loop playsinline></video>
@@ -180,9 +216,17 @@ Když husa uteče, dá se dohledat proč.</p>
   <img src="img/druhy.jpg" alt="Ikony druhů: jelen, kůň divoký, kráva, prase, husa, zajíc, králík, holub, sojka, vlk, liška, kočka" loading="lazy">
 </div>
 <p style="color:var(--ink-dim);font-size:.9rem;margin-top:.6rem">
-  Jelen, kůň divoký, kráva, prase, husa, zajíc, králík, holub a sojka — a proti nim vlk, liška a kočka.
+  K jelenům, divokým koním, kravám, prasatům, husám, zajícům, králíkům, holubům a sojkám
+  se přidaly ovce a kozy. Na louce žijí také vlci, lišky a kočky; přibývají slepice, kamzík a medvěd.
   Každý druh má vlastní smysly, rychlost, potravu a strach z ostatních.
 </p>
+<div class="shots">
+  <figure class="wide">
+    <img src="img/2026-09-12-druhy.jpg" alt="Dlaždice druhů v katalogu zvířat včetně ovce a kozy" loading="lazy" onerror="this.hidden=true; this.nextElementSibling.hidden=false">
+    <p class="shot-placeholder" hidden>Snímek katalogu s ovcí a kozou připravujeme.</p>
+    <figcaption>Katalog druhů doplněný o ovci a kozu. Pruh ikon výše pochází ze starší verze.</figcaption>
+  </figure>
+</div>
 
 <h2>Co všechno se v tom počítá</h2>
 <p style="color:var(--ink-dim)">Zvíře se nerozhoduje podle scénáře. Každou chvíli si boduje,
@@ -235,7 +279,8 @@ zachovají pokaždé jinak.</p>
       útočiště a vlk přejde po ledu), tráva neroste a stromy jsou holé.</li>
   <li><b>Voda</b> má hloubku: rybníkem neplavec neprojde a obchází ho, mělčinou a brodem projde
       každý, proud v potoce unáší. Padlá kláda je pro neplavce jediná cesta přes tok.</li>
-  <li><b>Kopce</b> mají místy sráz, který přeleze jen kočka. Z vrcholu je dál vidět.</li>
+  <li><b>Kopce</b> mají místy sráz, který přeleze kočka i koza. Koza se na něm může ukrýt
+      před vlkem. Z vrcholu je dál vidět.</li>
   <li><b>Vítr a déšť</b> se mění samy a jde je na chvíli převzít. Vítr rozhoduje o čichu.</li>
 </ul>
 
@@ -244,7 +289,7 @@ zachovají pokaždé jinak.</p>
   <li><b>Nová louka</b>: vybereš krajinu, velikost, startovní sadu zvířat a seed — a rovnou vidíš
       náhled mapy, která se spustí. Rozehraná hra se ukládá sama, takže „Pokračovat“ tě vrátí,
       kde jsi skončil.</li>
-  <li><b>Nastavení</b>: celá obrazovka, svislá synchronizace, strop snímků, hlasitost, štítky,
+  <li><b>Nastavení</b>: rozlišení okna, velikost UI, celá obrazovka, svislá synchronizace, strop snímků, hlasitost, štítky,
       ukazatele smyslů, proudění větru a délka dne i roku.</li>
   <li><b>Životopis</b>: u vybraného zvířete je záložka Život — kdy se narodilo, kdy dospělo,
       kolik přečkalo zim, koho potkalo a o co přišlo.</li>
@@ -260,6 +305,11 @@ zachovají pokaždé jinak.</p>
 
 <h2>Co je nového</h2>
 <p style="color:var(--ink-dim)">Úplný seznam změn je v <a href="CHANGELOG.md">changelogu</a>.</p>
+
+<h2>Jak se hra vyvíjí</h2>
+<p>Hra postupně dostává další druhy, chování i úpravy rozhraní.
+V <a href="historie/">archivu starších podob stránky</a> se můžeš podívat,
+jak vypadala dřív a co tehdy uměla.</p>
 
 <footer>
   <p>Modely zvířat: <a href="https://quaternius.com">Quaternius</a>, licence CC0.
