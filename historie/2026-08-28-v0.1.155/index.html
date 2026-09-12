@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Hide: Meadow Minds — stažení</title>
+<meta name="description" content="Posed: Mysl louky — pozorovací simulátor chování zvířat. Postav louku, vlož do ní zvířata a čti, o čem přemýšlejí.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap">
+<style>
+:root{
+  --ink:#E8EFE3; --ink-dim:#9FB09C; --accent:#C3DA76; --accent-warm:#E0B15A;
+  --panel:#161E1A; --panel-soft:#1D2721; --line:#38473C; --ground:#0E1411;
+  --shadow:0 10px 30px rgba(0,0,0,.45);
+}
+*{box-sizing:border-box}
+body{
+  margin:0; background:var(--ground); color:var(--ink);
+  font:16px/1.65 Inter,-apple-system,Segoe UI,Roboto,sans-serif;
+  background-image:radial-gradient(1100px 520px at 50% -8%, #1c2a1e 0%, transparent 62%);
+}
+.wrap{max-width:74ch; margin:0 auto; padding:clamp(2.5rem,7vw,5rem) 1.25rem 5rem}
+header{text-align:center; margin-bottom:3.5rem}
+h1{
+  font-family:Bitter,Georgia,serif; font-weight:600; text-wrap:balance;
+  font-size:clamp(2rem,6vw,3.1rem); line-height:1.12; margin:0 0 .35rem;
+}
+h1 .sub{display:block; font-size:.44em; font-style:italic; font-weight:400; color:var(--accent); margin-top:.5rem}
+.tagline{color:var(--ink-dim); max-width:48ch; margin:1.25rem auto 0; text-wrap:pretty}
+h2{
+  font-family:Bitter,Georgia,serif; font-size:1.25rem; font-weight:600;
+  margin:3.5rem 0 1rem; padding-bottom:.5rem; border-bottom:1px solid var(--line);
+}
+h3{font-size:.98rem; font-weight:600; margin:0 0 .3rem}
+a{color:var(--accent)}
+
+.downloads{display:grid; gap:.85rem; margin-top:2rem}
+.dl{
+  display:flex; align-items:center; gap:1rem; text-decoration:none; color:inherit;
+  background:var(--panel-soft); border:1px solid var(--line); border-radius:12px;
+  padding:1rem 1.15rem; box-shadow:var(--shadow); transition:border-color .15s, transform .15s;
+}
+.dl:hover,.dl:focus-visible{border-color:var(--accent); transform:translateY(-1px)}
+.dl:focus-visible{outline:2px solid var(--accent); outline-offset:3px}
+.dl .os{font-family:Bitter,Georgia,serif; font-size:1.05rem}
+.dl .meta{color:var(--ink-dim); font-size:.85rem; font-variant-numeric:tabular-nums}
+.dl .grow{flex:1; min-width:0}
+.dl .go{color:var(--accent); font-weight:600; white-space:nowrap}
+.glyph{
+  width:38px; height:38px; flex:none; display:grid; place-items:center;
+  border-radius:9px; background:#121A15; border:1px solid var(--line); color:var(--accent);
+}
+
+.note{
+  background:var(--panel); border:1px solid var(--line); border-left:3px solid var(--accent-warm);
+  border-radius:9px; padding:1rem 1.15rem; margin:1rem 0;
+}
+.note p{margin:.4rem 0 0; color:var(--ink-dim); font-size:.92rem}
+code{
+  font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:.86em;
+  background:#101711; border:1px solid var(--line); border-radius:5px; padding:.12em .42em;
+}
+pre{
+  background:#101711; border:1px solid var(--line); border-radius:9px;
+  padding:.85rem 1rem; overflow-x:auto; font-size:.86rem; margin:.6rem 0 0;
+}
+pre code{background:none; border:none; padding:0}
+
+ul.plain{list-style:none; padding:0; margin:0}
+ul.plain li{padding:.55rem 0; border-bottom:1px solid rgba(56,71,60,.5); color:var(--ink-dim)}
+ul.plain li:last-child{border-bottom:none}
+ul.plain b{color:var(--ink); font-weight:600}
+
+.shots{display:grid; grid-template-columns:repeat(2,1fr); gap:.75rem; margin-top:1.5rem}
+.shots figure{margin:0; border:1px solid var(--line); border-radius:10px; overflow:hidden; background:var(--panel-soft)}
+.shots img,.shots video{display:block; width:100%; height:auto; background:#0E1411}
+.shots figcaption{padding:.55rem .8rem; font-size:.83rem; color:var(--ink-dim)}
+.shots .wide{grid-column:1 / -1}
+@media (max-width:34rem){ .shots{grid-template-columns:1fr} }
+.species{margin-top:1.25rem; border:1px solid var(--line); border-radius:10px; overflow-x:auto}
+.species img{display:block; height:88px; width:auto; min-width:100%}
+
+.archiv{
+  background:var(--panel); border:1px solid var(--line); border-left:3px solid var(--accent-warm);
+  border-radius:9px; padding:.7rem 1rem; margin:0 0 2rem; font-size:.88rem; color:var(--ink-dim);
+}
+.archiv b{color:var(--ink)}
+footer{margin-top:4rem; padding-top:1.5rem; border-top:1px solid var(--line); color:var(--ink-dim); font-size:.86rem}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<p class="archiv">Archivovaná podoba stránky z <b>28.&nbsp;8.&nbsp;2026</b> (verze v0.1.155).
+  Aktuální stránka je <a href="../../">tady</a>, starší podoby v <a href="../">historii</a>.</p>
+
+<header>
+  <h1>The Hide: Meadow Minds
+    <span class="sub">Posed: Mysl louky</span></h1>
+  <p class="tagline">Postav louku, vlož do ní zvířata a čti, o čem přemýšlejí.
+    Není co vyhrát — je co pozorovat.</p>
+</header>
+
+<figure class="hero" style="margin:0 0 3rem; border:1px solid var(--line); border-radius:12px; overflow:hidden; box-shadow:var(--shadow)">
+  <img src="img/01-stado.jpg" alt="Stádo divokých koní v různém zbarvení se pase na ranní louce" style="display:block;width:100%;height:auto">
+</figure>
+
+<h2>Stáhnout</h2>
+<p style="color:var(--ink-dim);margin-top:.75rem">Vývojový build. Nic se neinstaluje, stačí rozbalit a spustit.</p>
+
+<div class="downloads">
+  <a class="dl" href="https://github.com/OlafHappyson/meadow-minds/releases/latest/download/TheHide-win64.zip">
+    <span class="glyph" aria-hidden="true">▣</span>
+    <span class="grow">
+      <h3 class="os">Windows</h3>
+      <span class="meta">64bit · ZIP · 50 MB</span>
+    </span>
+    <span class="go">Stáhnout →</span>
+  </a>
+  <a class="dl" href="https://github.com/OlafHappyson/meadow-minds/releases/latest/download/TheHide-macos.zip">
+    <span class="glyph" aria-hidden="true">◧</span>
+    <span class="grow">
+      <h3 class="os">macOS</h3>
+      <span class="meta">Apple Silicon i Intel · ZIP · 72 MB</span>
+    </span>
+    <span class="go">Stáhnout →</span>
+  </a>
+  <a class="dl" href="https://github.com/OlafHappyson/meadow-minds/releases/latest/download/TheHide-linux-x86_64.tar.gz">
+    <span class="glyph" aria-hidden="true">◨</span>
+    <span class="grow">
+      <h3 class="os">Linux</h3>
+      <span class="meta">x86-64 · tar.gz · 40 MB</span>
+    </span>
+    <span class="go">Stáhnout →</span>
+  </a>
+</div>
+
+<div class="note">
+  <h3>Než to spustíš</h3>
+  <p><b>Windows</b> — build není podepsaný, takže SmartScreen hlásí neznámého vydavatele.
+     Klikni na <em>Další informace</em> → <em>Přesto spustit</em>.</p>
+  <p><b>macOS</b> — aplikace není notarizovaná a systém ji po stažení zablokuje (může tvrdit,
+     že je „poškozená“ — není). Sundej karanténní značku:</p>
+  <pre><code>xattr -dr com.apple.quarantine ~/Downloads/TheHide.app</code></pre>
+  <p><b>Linux</b> — kdyby to hlásilo <code>Permission denied</code>, chybí právo ke spuštění:
+     <code>chmod +x TheHide.x86_64</code>. Potřebuje ovladače s Vulkanem; bez nich zkus
+     <code>./TheHide.x86_64 --rendering-driver opengl3</code>.</p>
+</div>
+
+<h2>Co to je</h2>
+<p>Zero-player simulátor chování zvířat. Nesbíráš body a nikam nepostupuješ — stavíš louku
+(kopce, rybníky, potoky, lesíky, krmítka), vkládáš do ní zvířata a pak sleduješ, co se stane.</p>
+<p>Zvláštní na tom je, že vidíš zvířeti <b>do hlavy</b>: v pravém panelu běží jeho úvaha —
+co právě zvažuje, jak si to boduje, co vidí, cítí a slyší, co si pamatuje a čeho se bojí.
+Když husa uteče, dá se dohledat proč.</p>
+
+<h2>Ze hry</h2>
+<div class="shots">
+  <figure class="wide">
+    <video src="img/klip-mysl.mp4" poster="img/klip-mysl-poster.jpg" autoplay muted loop playsinline></video>
+    <figcaption>Pravý panel je jádro hry: vidíš, co zvíře zvažuje, jak si to boduje a proč se rozhodlo utéct.</figcaption>
+  </figure>
+  <figure>
+    <video src="img/klip-stado.mp4" poster="img/klip-stado-poster.jpg" autoplay muted loop playsinline></video>
+    <figcaption>Stádo divokých koní. Každý kus má vlastní zbarvení a drží si od ostatních odstup.</figcaption>
+  </figure>
+  <figure>
+    <video src="img/klip-rybnik.mp4" poster="img/klip-rybnik-poster.jpg" autoplay muted loop playsinline></video>
+    <figcaption>Husy na rybníku. Voda je pro ně útočiště — liška za nimi nepůjde.</figcaption>
+  </figure>
+  <figure>
+    <img src="img/03-kopec.jpg" alt="Jelen stojí na vrcholu kopce, pod ním se pase kůň" loading="lazy">
+    <figcaption>Z kopce je dál vidět. Zvířata to vědí a chodí se tam rozhlížet.</figcaption>
+  </figure>
+  <figure>
+    <img src="img/05-zima.jpg" alt="Krávy stojí ve sněhu na zimní louce" loading="lazy">
+    <figcaption>Rok trvá šestnáct dnů. V zimě zamrzne rybník a tráva přestane růst.</figcaption>
+  </figure>
+  <figure class="wide">
+    <img src="img/06-svitani.jpg" alt="Padlá kláda přes potok za svítání" loading="lazy">
+    <figcaption>Padlá kláda přes potok — jediná cesta pro toho, kdo neumí plavat.</figcaption>
+  </figure>
+</div>
+
+<h2>Kdo na louce žije</h2>
+<div class="species">
+  <img src="img/druhy.jpg" alt="Ikony druhů: jelen, kůň divoký, kráva, prase, husa, zajíc, králík, holub, sojka, vlk, liška, kočka" loading="lazy">
+</div>
+<p style="color:var(--ink-dim);font-size:.9rem;margin-top:.6rem">
+  Jelen, kůň divoký, kráva, prase, husa, zajíc, králík, holub a sojka — a proti nim vlk, liška a kočka.
+  Každý druh má vlastní smysly, rychlost, potravu a strach z ostatních.
+</p>
+
+<h2>Co všechno se v tom počítá</h2>
+<p style="color:var(--ink-dim)">Zvíře se nerozhoduje podle scénáře. Každou chvíli si boduje,
+co teď dává největší smysl, a vyhrává nejlepší nápad — proto se dva kusy stejného druhu
+zachovají pokaždé jinak.</p>
+
+<h3 style="margin-top:1.8rem">Smysly a paměť</h3>
+<ul class="plain">
+  <li><b>Zrak</b> má zorný kužel, dosah podle druhu a v noci se krátí. Z kopce je vidět dál,
+      při pastvě se hlava sklání a zvíře vidí míň. Porost a kopce výhled zaclánějí.</li>
+  <li><b>Čich</b> nese vítr: predátora ucítíš proti větru, po větru skoro vůbec. Vodu je cítit
+      násobně dál, než je vidět — proto ji stádo najde, i když na ni nedohlédne.</li>
+  <li><b>Sluch</b> podle hlučnosti: běžící zvíře, lov nebo syčící husa je slyšet i za zády
+      a přes porost. Sojka umí varovat celou louku.</li>
+  <li><b>Paměť</b> míst: kde byla tráva, voda, úkryt — a kde mě honili. Vzpomínky slábnou,
+      ale napajedlo si zvíře pamatuje dlouho, protože rybník se nestěhuje.</li>
+  <li><b>Zvyknutí</b>: na hluk, který se opakuje a nic po něm nepřijde, si zvíře zvykne.</li>
+</ul>
+
+<h3 style="margin-top:1.8rem">Rozmnožování a mláďata</h3>
+<ul class="plain">
+  <li><b>Páry</b> u druhů, které je tvoří (husa, holub, sojka, liška, vlk). Vlčí smečka má
+      jen jeden pár. Vdovec půl dne truchlí, pak si hledá nového partnera.</li>
+  <li><b>Hnízdo</b> je skutečný objekt s vejci — na stromě, u paty stromu, v porostu nebo v noře.
+      Pták na vejcích sedí, potřeby mu rostou pomaleji a odchází, až když už nemůže.
+      Když hnízdo nikdo nehřeje, vejce chladnou. Liška a kočka je vybírají a matka o tom ví.</li>
+  <li><b>Mláďata</b>: koloušek a zajíček první den leží schovaní a matka je chodí navštěvovat.
+      Ptáčata a mláďata šelem se sama neuživí — rodič jim nosí potravu, a když je jich moc,
+      dostane nejdřív ten nejprůbojnější. Sirotek hladoví. Mládě v dešti bez úkrytu prochladne.</li>
+  <li><b>Učení</b>: mládě přebírá od matky, kde je voda, úkryt a kde je nebezpečno.</li>
+  <li><b>Příbuznost</b>: rodokmen se drží a příbuzní se nepáří.</li>
+</ul>
+
+<h3 style="margin-top:1.8rem">Potrava a potřeby</h3>
+<ul class="plain">
+  <li><b>Tráva</b> je skutečná zásoba: spasené místo se dorůstá, v zimě neroste. Stádo,
+      které stojí moc dlouho na jednom místě, si ho vypase.</li>
+  <li><b>Voda</b>: pije se z okraje, velké zvíře dosáhne z břehu dál než husa.
+      Napije se dosyta, ne jen na chvíli. Zamrzlý rybník pití nezastaví, jen zpomalí.</li>
+  <li><b>Lov</b>: predátor si vybírá kořist podle druhu, vzdálenosti a toho, jestli je osamělá.
+      Plíží se, útočí zblízka, sprint mu dojde. Husy ho můžou zahnat, když jsou ve skupině.
+      Vlk nechá zbytek úlovku ležet a chodí se k němu vracet.</li>
+  <li><b>Hlad, žízeň, únava, potřeba společnosti, ostražitost, strach a páření</b> rostou různě
+      rychle podle druhu a proti sobě soupeří.</li>
+</ul>
+
+<h3 style="margin-top:1.8rem">Prostředí</h3>
+<ul class="plain">
+  <li><b>Roční období</b>: rok trvá ve výchozím nastavení šestnáct dnů (jde zkrátit i prodloužit). V zimě zamrzne rybník (husy tím ztrácejí
+      útočiště a vlk přejde po ledu), tráva neroste a stromy jsou holé.</li>
+  <li><b>Voda</b> má hloubku: rybníkem neplavec neprojde a obchází ho, mělčinou a brodem projde
+      každý, proud v potoce unáší. Padlá kláda je pro neplavce jediná cesta přes tok.</li>
+  <li><b>Kopce</b> mají místy sráz, který přeleze jen kočka. Z vrcholu je dál vidět.</li>
+  <li><b>Vítr a déšť</b> se mění samy a jde je na chvíli převzít. Vítr rozhoduje o čichu.</li>
+</ul>
+
+<h3 style="margin-top:1.8rem">Než se louka rozběhne</h3>
+<ul class="plain">
+  <li><b>Nová louka</b>: vybereš krajinu, velikost, startovní sadu zvířat a seed — a rovnou vidíš
+      náhled mapy, která se spustí. Rozehraná hra se ukládá sama, takže „Pokračovat“ tě vrátí,
+      kde jsi skončil.</li>
+  <li><b>Nastavení</b>: celá obrazovka, svislá synchronizace, strop snímků, hlasitost, štítky,
+      ukazatele smyslů, proudění větru a délka dne i roku.</li>
+  <li><b>Životopis</b>: u vybraného zvířete je záložka Život — kdy se narodilo, kdy dospělo,
+      kolik přečkalo zim, koho potkalo a o co přišlo.</li>
+</ul>
+
+<h2>Ovládání</h2>
+<ul class="plain">
+  <li><b>WASD</b> posun kamery · <b>kolečko</b> přiblížení · <b>Q/E</b> otáčení</li>
+  <li><b>klik na zvíře</b> výběr · <b>Esc</b> zrušení · <b>V</b> pohled očima zvířete</li>
+  <li><b>H</b> fotorežim (schová panely) · <b>Ctrl+Z</b> zpět</li>
+  <li><b>Shift + kolečko</b> velikost vkládaného prvku</li>
+</ul>
+
+<h2>Co je nového</h2>
+<p style="color:var(--ink-dim)">Úplný seznam změn je v <a href="../../CHANGELOG.md">changelogu</a>.</p>
+
+<footer>
+  <p>Modely zvířat: <a href="https://quaternius.com">Quaternius</a>, licence CC0.
+     Zvuk je syntetizovaný, žádné nahrávky.</p>
+  <p>Vývojový build — počítej s tím, že se věci mění a uložené hry nemusí přežít další verzi.</p>
+</footer>
+
+</div>
+</body>
+</html>

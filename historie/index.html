@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Hide: Meadow Minds — historie stránky</title>
+<meta name="description" content="Archiv dosavadních podob stránky hry The Hide: Meadow Minds — jak se hra postupně vyvíjela.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap">
+<style>
+:root{
+  --ink:#E8EFE3; --ink-dim:#9FB09C; --accent:#C3DA76; --accent-warm:#E0B15A;
+  --panel:#161E1A; --panel-soft:#1D2721; --line:#38473C; --ground:#0E1411;
+  --shadow:0 10px 30px rgba(0,0,0,.45);
+}
+*{box-sizing:border-box}
+body{
+  margin:0; background:var(--ground); color:var(--ink);
+  font:16px/1.65 Inter,-apple-system,Segoe UI,Roboto,sans-serif;
+  background-image:radial-gradient(1100px 520px at 50% -8%, #1c2a1e 0%, transparent 62%);
+}
+.wrap{max-width:74ch; margin:0 auto; padding:clamp(2.5rem,7vw,5rem) 1.25rem 5rem}
+header{text-align:center; margin-bottom:3rem}
+h1{
+  font-family:Bitter,Georgia,serif; font-weight:600; text-wrap:balance;
+  font-size:clamp(1.8rem,5vw,2.6rem); line-height:1.15; margin:0;
+}
+h1 .sub{display:block; font-size:.48em; font-style:italic; font-weight:400; color:var(--accent); margin-top:.5rem}
+.tagline{color:var(--ink-dim); max-width:50ch; margin:1.25rem auto 0; text-wrap:pretty}
+a{color:var(--accent)}
+.zpet{display:inline-block; margin-bottom:2rem; color:var(--ink-dim); text-decoration:none; font-size:.9rem}
+.zpet:hover,.zpet:focus-visible{color:var(--accent)}
+
+h2{
+  font-family:Bitter,Georgia,serif; font-size:1.25rem; font-weight:600;
+  margin:0 0 1.25rem; padding-bottom:.5rem; border-bottom:1px solid var(--line);
+}
+
+/* Seznam archivů — další položka se přidá jako nový <li class="polozka"> nahoru. */
+ol.archiv{list-style:none; padding:0; margin:0; display:grid; gap:.85rem}
+.polozka a.karta{
+  display:flex; align-items:center; gap:1rem; text-decoration:none; color:inherit;
+  background:var(--panel-soft); border:1px solid var(--line); border-radius:12px;
+  padding:1rem 1.15rem; box-shadow:var(--shadow); transition:border-color .15s, transform .15s;
+}
+.polozka a.karta:hover,.polozka a.karta:focus-visible{border-color:var(--accent); transform:translateY(-1px)}
+.polozka a.karta:focus-visible{outline:2px solid var(--accent); outline-offset:3px}
+.nahled{
+  width:88px; height:60px; flex:none; border-radius:8px; object-fit:cover;
+  border:1px solid var(--line); background:#121A15;
+}
+.telo{flex:1; min-width:0}
+.hlava{display:flex; align-items:baseline; gap:.6rem; flex-wrap:wrap}
+.datum{font-family:Bitter,Georgia,serif; font-size:1.05rem}
+.verze{
+  font-size:.78rem; color:var(--accent-warm); font-variant-numeric:tabular-nums;
+  border:1px solid var(--line); border-radius:5px; padding:.1em .45em; background:#121A15;
+}
+.co{margin:.35rem 0 0; color:var(--ink-dim); font-size:.9rem; text-wrap:pretty}
+.go{color:var(--accent); font-weight:600; white-space:nowrap; align-self:center}
+@media (max-width:34rem){
+  .polozka a.karta{flex-wrap:wrap}
+  .nahled{width:100%; height:120px}
+  .go{width:100%}
+}
+
+footer{margin-top:4rem; padding-top:1.5rem; border-top:1px solid var(--line); color:var(--ink-dim); font-size:.86rem}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<a class="zpet" href="../">← zpět na stránku hry</a>
+
+<header>
+  <h1>Historie stránky
+    <span class="sub">The Hide: Meadow Minds</span></h1>
+  <p class="tagline">Starší podoby téhle stránky, tak jak vypadaly v den vydání.
+    Je z nich vidět, co hra v té době uměla a jak postupně přirůstala.</p>
+</header>
+
+<h2>Archivované podoby</h2>
+
+<ol class="archiv">
+
+  <li class="polozka">
+    <a class="karta" href="2026-08-28-v0.1.155/">
+      <img class="nahled" src="2026-08-28-v0.1.155/img/01-stado.jpg" alt="Stádo divokých koní na ranní louce" loading="lazy">
+      <span class="telo">
+        <span class="hlava">
+          <span class="datum">28. srpna 2026</span>
+          <span class="verze">v0.1.155</span>
+        </span>
+        <span class="co">Dvanáct druhů na louce, úvodní obrazovka s náhledem mapy, životopis
+          u každého zvířete — a zvířata, která i v klidu dýchají, žvýkají a rozhlížejí se.</span>
+      </span>
+      <span class="go">Otevřít →</span>
+    </a>
+  </li>
+
+</ol>
+
+<footer>
+  <p>Archivy jsou soběstačné kopie — obrázky a videa mají u sebe, takže vypadají přesně tak
+     jako tehdy. Odkazy ke stažení v nich ale vedou na nejnovější build.</p>
+  <p>Úplný seznam změn je v <a href="../CHANGELOG.md">changelogu</a>.</p>
+</footer>
+
+</div>
+</body>
+</html>
