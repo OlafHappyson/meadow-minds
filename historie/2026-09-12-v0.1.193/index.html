@@ -84,10 +84,19 @@ ul.plain b{color:var(--ink); font-weight:600}
 .species img{display:block; height:88px; width:auto; min-width:100%}
 
 footer{margin-top:4rem; padding-top:1.5rem; border-top:1px solid var(--line); color:var(--ink-dim); font-size:.86rem}
+.archiv{
+  margin:0 0 2rem; padding:.7rem 1rem; border:1px solid var(--line); border-radius:10px;
+  background:var(--panel-soft); color:var(--ink-dim); font-size:.9rem;
+}
+.archiv b{color:var(--ink)}
 </style>
 </head>
 <body>
 <div class="wrap">
+
+<p class="archiv">Archivovaná podoba stránky z <b>12.&nbsp;9.&nbsp;2026</b> (verze v0.1.193).
+  Aktuální stránka je <a href="../../">tady</a>, starší podoby v <a href="../">historii</a>.</p>
+
 
 <header>
   <h1>The Hide: Meadow Minds
@@ -149,7 +158,7 @@ ovce, kozy a vlk. Nesbíráš body a nikam nepostupuješ — je tu co pozorovat.
 <p>Zvláštní na tom je, že vidíš zvířeti <b>do hlavy</b>: v pravém panelu běží jeho úvaha —
 co právě zvažuje, jak si to boduje, co vidí, cítí a slyší, co si pamatuje a čeho se bojí.
 Když husa uteče, dá se dohledat proč.</p>
-<p style="color:var(--ink-dim);font-size:.9rem">Stav hry v září 2026, verze 0.1.211.</p>
+<p style="color:var(--ink-dim);font-size:.9rem">Stav hry v září 2026, přibližně verze 0.1.193.</p>
 
 <h2>Ovce, kozy a Salaš</h2>
 <p><b>Ovce</b> před nebezpečím prchají pohromadě jedním směrem. Když ovce zůstane sama,
@@ -160,34 +169,14 @@ takže můžeš sledovat, jak na stejné nebezpečí reagují.</p>
 <p>Přibývají také slepice, kamzík a medvěd.</p>
 <div class="shots">
   <figure>
-    <img src="img/2026-09-12v-salas.jpg" alt="Stádo ovcí se pase pohromadě, kozy okusují opodál u skály" loading="lazy">
-    <figcaption>Salaš hned po spuštění: ovce se pasou v houfu, kozy se toulají opodál.
-      Vlk zatím obchází druhou stranu louky.</figcaption>
-  </figure>
-</div>
-
-<h2>Jak zvířata vypadají a jak chodí</h2>
-<p>Koza a kamzík zhubli do podoby, jakou mají doopravdy — jsou to šlachovitá zvířata,
-ne kulaté ovce s rohy. Medvěd dostal skutečné zadní nohy se stehnem, hleznem a plnou
-tlapou, na kterou došlapuje celou vahou.</p>
-<p><b>Chůze už není jedno tempo pro všechny.</b> Každý druh má vlastní krok: medvěd
-mimochod (obě nohy jedné strany naráz), kopytníci diagonální chůzi. Zvíře, které se
-nikam nežene, se nově chvíli pase a pak jen stojí a rozhlíží se — dřív všechno
-pochodovalo pořád stejně rychle. A <b>běh je cval</b>, ne zrychlené kmitání nohama.</p>
-<div class="shots">
-  <figure class="wide">
-    <img src="img/2026-09-12v-modely.jpg" alt="Přehled modelů nových druhů: ovce, koza, slepice, medvěd, kamzík a jestřáb, vždy samice, samec a mládě" loading="lazy">
-    <figcaption>Každý druh má samici, samce i mládě; rohy mláděti dorůstají s věkem.
-      Jestřáb má model hotový, ale do hry zatím nepřilétl — simulace neumí létajícího lovce.</figcaption>
+    <img src="img/2026-09-12-salas.jpg" alt="Stádo ovcí a koz na salaši, na obzoru je vlk" loading="lazy" onerror="this.hidden=true; this.nextElementSibling.hidden=false">
+    <p class="shot-placeholder" hidden>Snímek salaše s ovcemi, kozami a vlkem připravujeme.</p>
+    <figcaption>Salaš: startovní sada s ovcemi, kozami a vlkem.</figcaption>
   </figure>
   <figure>
-    <img src="img/2026-09-12v-kamzici.jpg" alt="Kamzíci stojí na skalním výběžku nad srázem" loading="lazy">
-    <figcaption>Kamzíci na skále. Startovní sady teď dostanou i krajinu, kterou jejich druhy
-      potřebují — bez srázu neměla koza ani kamzík kam před vlkem vylézt.</figcaption>
-  </figure>
-  <figure>
-    <img src="img/2026-09-12v-slepice.jpg" alt="Slepice a kohout se hrabou v trávě na dvorku" loading="lazy">
-    <figcaption>Slepice se hrabou v trávě, popelí se a kohout ráno kokrhá.</figcaption>
+    <img src="img/2026-09-12-koza-skala.jpg" alt="Kozy a kamzíci u kopce se srázem, kam před vlkem lezou" loading="lazy" onerror="this.hidden=true; this.nextElementSibling.hidden=false">
+    <p class="shot-placeholder" hidden>Snímek kozy na srázu s vlkem pod ní připravujeme.</p>
+    <figcaption>Kozy a kamzíci u kopce se srázem – tam před vlkem lezou.</figcaption>
   </figure>
 </div>
 
@@ -196,21 +185,15 @@ pochodovalo pořád stejně rychle. A <b>běh je cval</b>, ne zrychlené kmitán
 i velikost rozhraní (UI). Tlačítka a ikony jsou ručně kreslené v bronzovém stylu.</p>
 <div class="shots">
   <figure class="wide">
-    <img src="img/2026-09-12v-rozhrani.jpg" alt="Celá obrazovka hry: vlevo katalog zvířat, vpravo mysl vybrané ovce, dole populace, časová osa a okno sledování" loading="lazy">
-    <figcaption>Rozhraní v okně 1920×1080. Dole vlevo je populace všech sedmnácti druhů,
-      vpravo panel mysli vybraného zvířete.</figcaption>
+    <img src="img/2026-09-12-rozhrani.jpg" alt="Celá obrazovka hry s novým rozhraním, bronzovými tlačítky a ikonami" loading="lazy" onerror="this.hidden=true; this.nextElementSibling.hidden=false">
+    <p class="shot-placeholder" hidden>Snímek hry s novým rozhraním připravujeme.</p>
+    <figcaption>Nové rozhraní: ručně kreslená tlačítka a ikony, velikost podle nastavení a okna.</figcaption>
   </figure>
 </div>
 
 <h2>Ze hry</h2>
-<p style="color:var(--ink-dim)">Nahoře záběr z téhle verze, pod ním starší klipy — je z nich vidět,
-jak se louka i rozhraní postupně měnily.</p>
+<p style="color:var(--ink-dim)">Klipy z dnešní verze. Starší záběry pod nimi ukazují louku i rozhraní v původní podobě.</p>
 <div class="shots">
-  <figure class="wide">
-    <video src="img/klip-2026v-salas.mp4" poster="img/klip-2026v-salas-poster.jpg" autoplay muted loop playsinline></video>
-    <figcaption>Salaš po spuštění: stádo se pase pohromadě, kozy se toulají opodál. Zvíře,
-      které se nikam nežene, chvíli jde a pak se jen zastaví a rozhlíží.</figcaption>
-  </figure>
   <figure class="wide">
     <video src="img/klip-2026-mysl.mp4" poster="img/klip-2026-mysl-poster.jpg" autoplay muted loop playsinline></video>
     <figcaption>Salaš: ovce se drží pohromadě, kozy okusují opodál. Vpravo běží mysl vybrané ovce.</figcaption>
@@ -342,21 +325,11 @@ zachovají pokaždé jinak.</p>
 </ul>
 
 <h2>Co je nového</h2>
-<ul class="plain">
-  <li><b>Nové druhy</b>: ovce, koza, kamzík, slepice a medvěd — každý s vlastním modelem
-      pro samici, samce i mládě.</li>
-  <li><b>Pohyb</b>: chůze podle druhu, cval místo zrychlené chůze, klidné zvíře se občas
-      jen zastaví a rozhlédne.</li>
-  <li><b>Startovní sady</b> Salaš, Dvorek, Skály a Hvozd si přinesou i krajinu, kterou
-      jejich zvířata potřebují, a začínají v klidu — šelma přichází až později.</li>
-  <li><b>Rozhraní</b>: škáluje se s oknem, má kreslenou grafiku a spodní lišta se vejde
-      i do menších oken.</li>
-</ul>
-<p style="color:var(--ink-dim)">Úplný seznam změn je v <a href="CHANGELOG.md">changelogu</a>.</p>
+<p style="color:var(--ink-dim)">Úplný seznam změn je v <a href="../../CHANGELOG.md">changelogu</a>.</p>
 
 <h2>Jak se hra vyvíjí</h2>
 <p>Hra postupně dostává další druhy, chování i úpravy rozhraní.
-V <a href="historie/">archivu starších podob stránky</a> se můžeš podívat,
+V <a href="../">archivu starších podob stránky</a> se můžeš podívat,
 jak vypadala dřív a co tehdy uměla.</p>
 
 <footer>

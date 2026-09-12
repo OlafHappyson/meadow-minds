@@ -1,5 +1,36 @@
 # Změny
 
+## v0.1.211 — 2026-09-12 (večer)
+
+Druhá dnešní verze. Ta ranní (v0.1.193) měla chyby, které jdou vidět hned po spuštění —
+tady jsou opravené, a k tomu přibyl pohyb, který vypadá jako zvíře, a klidný začátek hry.
+
+### Jak zvířata vypadají a jak se hýbou
+- **Koza a kamzík zhubli.** Byli kulatí jako ovce s rohy; ve skutečnosti jsou to šlachovitá
+  zvířata. Medvěd dostal skutečné zadní nohy — stehno, hlezno a plnou tlapu, na kterou
+  došlapuje celou vahou, místo placatých prken.
+- **Chůze podle druhu.** Medvěd chodí mimochodem (obě nohy jedné strany naráz), kopytníci
+  diagonálně. Zvíře, které nikam nespěchá, chvíli jde a pak se zastaví a rozhlíží se —
+  dřív všechno pochodovalo pořád stejným tempem.
+- **Běh je cval**, ne zrychlené kmitání nohama: záběr předních a zadních nohou se střídá
+  a tělo se v každém skoku jednou nadzvedne.
+
+### Louka a startovní sady
+- **Sada si přinese krajinu, kterou její druhy potřebují.** Na Skalách ani na Salaši dřív
+  nebyl jediný kopec, takže koza ani kamzík neměli kam před vlkem vylézt a jejich hlavní
+  obrana se ve hře nikdy neukázala. Teď kamzíci stojí na skále a vlk hon vzdá.
+- **Hra začíná klidem.** Stádo stojí pohromadě na jedné straně louky, šelma přichází
+  z druhé a je najedená. Salaš dřív začínala tím, že celé stádo prchalo ještě před snídaní.
+- **Kamera na startu** míří na hlouček u vybraného zvířete, ne doprostřed mapy.
+- **Vlk uhýbá medvědovi** a přestal skrz ostatní zvířata procházet.
+- Slepic se rodí rozumný počet: z osmi jich za osm dní bylo osmačtyřicet, teď třináct.
+
+### Rozhraní
+- **Spodní lišta se vejde na obrazovku.** V okně 1920×1080 přerůstala dolní okraj a seznam
+  zvířat i okno sledování se ořízly.
+- **V populaci chyběli** kůň, kráva a všech pět nových druhů.
+- Z panelu mysli zmizel vývojářský výpis o stavu animace.
+
 ## v0.1.193 — 2026-09-12
 
 Na louce přibyly ovce a kozy, velká zvířata se přestala nechat bez odporu lovit a rozhraní
