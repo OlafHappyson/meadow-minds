@@ -1,5 +1,47 @@
 # Změny
 
+## v0.1.228 — 2026-09-13
+
+Den o tom, jak louka vypadá a jak se po ní zvířata hýbou — a medvěd konečně dělá to,
+co medvěd dělat má.
+
+### Louka
+- **Květiny jsou kytky, ne kuličky.** Dřív to byly devíticentimetrové koule, jedna na třicet
+  metrů čtverečních, a jen od jara do poloviny léta. Teď mají stonek a hlavičku, tři siluety,
+  rostou v trsech a kvetou i v létě a na podzim.
+- **Keře s bobulemi** v porostu — tam, kde koza okusuje a medvěd sbírá. Dřív byl „keř“ jen
+  vyšší trs trávy.
+- **Kapradí, šťovík a bodláky** roztroušené po louce, aby měl koberec výšku.
+- **Po rytí zůstane rozrytý flíček**: tmavá zemina s vyrytými drny, která během tří dnů
+  bledne a zarůstá. Dřív po medvědovi ani praseti nezůstalo nic.
+- Nic z toho nestálo ani jedno vykreslovací volání navíc.
+
+### Medvěd
+- **Zimní spánek.** Na konci podzimu si najde brloh (pata kopce nebo porost) a prospí v něm
+  zimu; hlad mu přitom roste sedminovou rychlostí a předtím se od poloviny podzimu překrmuje.
+  Změřeno přes celý rok na třech seedech: zalehl jedenáctý den, probudil se šestnáctý,
+  hlad 0,27 → 0,43, přežil.
+- **Ryje kořínky**, když není co ulovit — většinu roku se tak uživí a nemusí se hnát za kořistí.
+- **U mršiny má přednost** před vlkem, liškou i kočkou. U jedné mršiny se medvěd nažral první
+  (71 s), pak vlk (49 s) a liška (55 s); na kočku nezbylo nic.
+- **Nový model**: teplá okrová srst s krémovým čenichem a pískovými tlapami místo jednolité
+  tmavé hnědi, velké čitelné plochy (6 944 → 3 392 trojúhelníků) a silueta jako jeden tvar —
+  dřív to byla hromada koulí.
+
+### Pohyb
+- **Chůze čeledních modelů ožila.** Ovce, koza, kamzík, slepice a medvěd se dřív hýbali skoro
+  jen nohama (hlava o 0,9°, ocas o 2°). Teď kývá hlava v rytmu kroku, krk pruží proti pohybu
+  těla, váha se přenáší z nohy na nohu a ocas se hýbe nepravidelně.
+- **Otáčení na místě doprovází přešlapování** u všech čtyřnohých druhů — dřív to uměl jediný
+  kůň a ostatní se stočili jako věž tanku. Ptáci místo toho poskočí.
+- **Pomalejší otáčení**: ovce z 200 na 120 °/s, koza 260 → 170, kamzík 280 → 200, medvěd
+  150 → 110. Úlovky za osm dní 8 → 5, populace stejné nebo vyšší.
+
+### Slepice
+- **Klovací pořádek** u potravy: kohout nade všemi, mezi slepicemi rozhoduje věk. Kdo ustoupí,
+  řekne v panelu mysli proč. Rozestup při zobání stoupl z 1,65 na 2,11 m a hejno tím netrpí
+  hlady.
+
 ## v0.1.211 — 2026-09-12 (večer)
 
 Druhá dnešní verze. Ta ranní (v0.1.193) měla chyby, které jdou vidět hned po spuštění —
