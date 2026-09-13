@@ -80,8 +80,6 @@ ul.plain b{color:var(--ink); font-weight:600}
 .shots figcaption{padding:.55rem .8rem; font-size:.83rem; color:var(--ink-dim)}
 .shots .wide{grid-column:1 / -1}
 @media (max-width:34rem){ .shots{grid-template-columns:1fr} }
-.species{margin-top:1.25rem; border:1px solid var(--line); border-radius:10px; overflow-x:auto}
-.species img{display:block; height:88px; width:auto; min-width:100%}
 
 footer{margin-top:4rem; padding-top:1.5rem; border-top:1px solid var(--line); color:var(--ink-dim); font-size:.86rem}
 </style>
@@ -151,118 +149,65 @@ co právě zvažuje, jak si to boduje, co vidí, cítí a slyší, co si pamatuj
 Když husa uteče, dá se dohledat proč.</p>
 <p style="color:var(--ink-dim);font-size:.9rem">Stav hry v září 2026, verze 0.1.211.</p>
 
-<h2>Ovce, kozy a Salaš</h2>
-<p><b>Ovce</b> před nebezpečím prchají pohromadě jedním směrem. Když ovce zůstane sama,
-bečí a stádo si ji najde. Jehně jde za hlasem matky.</p>
-<p><b>Koza</b> okusuje keře. Před vlkem vyleze na sráz a zůstane tam stát;
-vlk pod ní jen chodí. Ve startovní sadě <b>Salaš</b> jsou ovce, kozy a vlk pohromadě,
-takže můžeš sledovat, jak na stejné nebezpečí reagují.</p>
-<p>Přibývají také slepice, kamzík a medvěd.</p>
+<h2>Kdo na louce žije</h2>
+<p>Sedmnáct druhů: jelen, kůň divoký, kráva, ovce, koza, kamzík, slepice, prase, husa, zajíc,
+králík, holub a sojka; ze šelem vlk, liška, kočka a medvěd. Každý má vlastní smysly, rychlost,
+potravu a strach z ostatních — a vlastní model pro samici, samce i mládě.</p>
+<p style="margin-top:1.6rem"><b>Ovce</b> před nebezpečím prchají pohromadě jedním směrem; zatoulaná
+se ozve bečením a stádo si ji najde i přes celou louku. <b>Koza</b> okusuje keře a před vlkem vyleze
+na sráz, kam za ní nemůže. <b>Kamzík</b> dělá totéž na skále. <b>Slepice</b> se hrabou v trávě,
+popelí se a kohout ráno kokrhá. <b>Medvěd</b> si chodí po svém — i vlk mu uhne z cesty.</p>
 <div class="shots">
   <figure>
     <img src="img/2026-09-12v-salas.jpg" alt="Stádo ovcí se pase pohromadě, kozy okusují opodál u skály" loading="lazy">
-    <figcaption>Salaš hned po spuštění: ovce se pasou v houfu, kozy se toulají opodál.
-      Vlk zatím obchází druhou stranu louky.</figcaption>
-  </figure>
-</div>
-
-<h2>Jak zvířata vypadají a jak chodí</h2>
-<p>Koza a kamzík zhubli do podoby, jakou mají doopravdy — jsou to šlachovitá zvířata,
-ne kulaté ovce s rohy. Medvěd dostal skutečné zadní nohy se stehnem, hleznem a plnou
-tlapou, na kterou došlapuje celou vahou.</p>
-<p><b>Chůze už není jedno tempo pro všechny.</b> Každý druh má vlastní krok: medvěd
-mimochod (obě nohy jedné strany naráz), kopytníci diagonální chůzi. Zvíře, které se
-nikam nežene, se nově chvíli pase a pak jen stojí a rozhlíží se — dřív všechno
-pochodovalo pořád stejně rychle. A <b>běh je cval</b>, ne zrychlené kmitání nohama.</p>
-<div class="shots">
-  <figure class="wide">
-    <img src="img/2026-09-12v-modely.jpg" alt="Přehled modelů nových druhů: ovce, koza, slepice, medvěd, kamzík a jestřáb, vždy samice, samec a mládě" loading="lazy">
-    <figcaption>Každý druh má samici, samce i mládě; rohy mláděti dorůstají s věkem.
-      Jestřáb má model hotový, ale do hry zatím nepřilétl — simulace neumí létajícího lovce.</figcaption>
+    <figcaption>Salaš hned po spuštění: ovce se pasou v houfu, kozy se toulají opodál.</figcaption>
   </figure>
   <figure>
     <img src="img/2026-09-12v-kamzici.jpg" alt="Kamzíci stojí na skalním výběžku nad srázem" loading="lazy">
-    <figcaption>Kamzíci na skále. Startovní sady teď dostanou i krajinu, kterou jejich druhy
-      potřebují — bez srázu neměla koza ani kamzík kam před vlkem vylézt.</figcaption>
+    <figcaption>Kamzíci na skále. Vlk pod nimi chvíli chodí a pak hon vzdá.</figcaption>
   </figure>
   <figure>
     <img src="img/2026-09-12v-slepice.jpg" alt="Slepice a kohout se hrabou v trávě na dvorku" loading="lazy">
-    <figcaption>Slepice se hrabou v trávě, popelí se a kohout ráno kokrhá.</figcaption>
+    <figcaption>Dvorek: slepice se hrabou v trávě, mezi nimi obchází liška.</figcaption>
+  </figure>
+</div>
+
+<p style="margin-top:1.6rem"><b>Chůze není jedno tempo pro všechny.</b> Medvěd chodí mimochodem
+(obě nohy jedné strany naráz), kopytníci diagonálně. Zvíře, které se nikam nežene, chvíli jde
+a pak se jen zastaví a rozhlíží se. A běh je cval, ne zrychlené kmitání nohama.</p>
+<div class="shots">
+  <figure class="wide">
+    <img src="img/2026-09-12v-modely.jpg" alt="Přehled modelů nových druhů: ovce, koza, slepice, medvěd, kamzík a jestřáb, vždy samice, samec a mládě" loading="lazy">
+    <figcaption>Rohy mláděti dorůstají s věkem. Jestřáb má model hotový, ale do hry zatím
+      nepřilétl — simulace neumí létajícího lovce.</figcaption>
   </figure>
 </div>
 
 <h2>Rozhraní se přizpůsobí oknu</h2>
 <p>Celé rozhraní se škáluje s velikostí okna. V nastavení si vybereš rozlišení okna
-i velikost rozhraní (UI). Tlačítka a ikony jsou ručně kreslené v bronzovém stylu.</p>
+i velikost rozhraní. Tlačítka a ikony jsou ručně kreslené v bronzovém stylu.</p>
 <div class="shots">
   <figure class="wide">
     <img src="img/2026-09-12v-rozhrani.jpg" alt="Celá obrazovka hry: vlevo katalog zvířat, vpravo mysl vybrané ovce, dole populace, časová osa a okno sledování" loading="lazy">
-    <figcaption>Rozhraní v okně 1920×1080. Dole vlevo je populace všech sedmnácti druhů,
+    <figcaption>Rozhraní v okně 1920×1080. Vlevo katalog všech druhů, dole populace,
       vpravo panel mysli vybraného zvířete.</figcaption>
   </figure>
 </div>
 
 <h2>Ze hry</h2>
-<p style="color:var(--ink-dim)">Nahoře záběr z téhle verze, pod ním starší klipy — je z nich vidět,
-jak se louka i rozhraní postupně měnily.</p>
 <div class="shots">
   <figure class="wide">
     <video src="img/klip-2026v-salas.mp4" poster="img/klip-2026v-salas-poster.jpg" autoplay muted loop playsinline></video>
-    <figcaption>Salaš po spuštění: stádo se pase pohromadě, kozy se toulají opodál. Zvíře,
-      které se nikam nežene, chvíli jde a pak se jen zastaví a rozhlíží.</figcaption>
-  </figure>
-  <figure class="wide">
-    <video src="img/klip-2026-mysl.mp4" poster="img/klip-2026-mysl-poster.jpg" autoplay muted loop playsinline></video>
-    <figcaption>Salaš: ovce se drží pohromadě, kozy okusují opodál. Vpravo běží mysl vybrané ovce.</figcaption>
+    <figcaption>Salaš po spuštění: stádo se pase pohromadě, kozy se toulají opodál.</figcaption>
   </figure>
   <figure>
-    <video src="img/klip-2026-skala.mp4" poster="img/klip-2026-skala-poster.jpg" autoplay muted loop playsinline></video>
-    <figcaption>Kopec se srázem. Sem lezou kozy a kamzíci, když přijde vlk – nahoru za nimi nemůže.</figcaption>
-  </figure>
-  <figure>
-    <video src="img/klip-2026-dvorek.mp4" poster="img/klip-2026-dvorek-poster.jpg" autoplay muted loop playsinline></video>
-    <figcaption>Dvorek: slepice se hrabou v trávě, mezi nimi obchází liška.</figcaption>
-  </figure>
-  <figure class="wide">
     <video src="img/klip-mysl.mp4" poster="img/klip-mysl-poster.jpg" autoplay muted loop playsinline></video>
-    <figcaption>Starší záběr: pravý panel je jádro hry – co zvíře zvažuje, jak si to boduje a proč uteklo.</figcaption>
-  </figure>
-  <figure>
-    <video src="img/klip-stado.mp4" poster="img/klip-stado-poster.jpg" autoplay muted loop playsinline></video>
-    <figcaption>Stádo divokých koní. Každý kus má vlastní zbarvení a drží si od ostatních odstup.</figcaption>
+    <figcaption>Pravý panel je jádro hry: co zvíře zvažuje, jak si to boduje a proč uteklo.
+      (Starší záběr, rozhraní od té doby dostalo novou grafiku.)</figcaption>
   </figure>
   <figure>
     <video src="img/klip-rybnik.mp4" poster="img/klip-rybnik-poster.jpg" autoplay muted loop playsinline></video>
     <figcaption>Husy na rybníku. Voda je pro ně útočiště — liška za nimi nepůjde.</figcaption>
-  </figure>
-  <figure>
-    <img src="img/03-kopec.jpg" alt="Jelen stojí na vrcholu kopce, pod ním se pase kůň" loading="lazy">
-    <figcaption>Z kopce je dál vidět. Zvířata to vědí a chodí se tam rozhlížet.</figcaption>
-  </figure>
-  <figure>
-    <img src="img/05-zima.jpg" alt="Krávy stojí ve sněhu na zimní louce" loading="lazy">
-    <figcaption>Rok trvá šestnáct dnů. V zimě zamrzne rybník a tráva přestane růst.</figcaption>
-  </figure>
-  <figure class="wide">
-    <img src="img/06-svitani.jpg" alt="Padlá kláda přes potok za svítání" loading="lazy">
-    <figcaption>Padlá kláda přes potok — jediná cesta pro toho, kdo neumí plavat.</figcaption>
-  </figure>
-</div>
-
-<h2>Kdo na louce žije</h2>
-<div class="species">
-  <img src="img/2026-09-12-kdo-tu-zije.jpg" alt="Dlaždice druhů v katalogu: jelen, kůň divoký, kráva, ovce, koza, kamzík, slepice, prase, husa, zajíc, králík, holub, sojka a predátoři vlk, liška, kočka, medvěd" loading="lazy">
-</div>
-<p style="color:var(--ink-dim);font-size:.9rem;margin-top:.6rem">
-  Sedmnáct druhů: jelen, kůň divoký, kráva, ovce, koza, kamzík, slepice, prase, husa, zajíc,
-  králík, holub a sojka; ze šelem vlk, liška, kočka a medvěd.
-  Každý druh má vlastní smysly, rychlost, potravu a strach z ostatních.
-</p>
-<div class="shots">
-  <figure class="wide">
-    <img src="img/2026-09-12-druhy.jpg" alt="Dlaždice druhů v katalogu zvířat včetně ovce a kozy" loading="lazy" onerror="this.hidden=true; this.nextElementSibling.hidden=false">
-    <p class="shot-placeholder" hidden>Snímek katalogu s ovcí a kozou připravujeme.</p>
-    <figcaption>Katalog druhů doplněný o ovci a kozu. Pruh ikon výše pochází ze starší verze.</figcaption>
   </figure>
 </div>
 
@@ -270,66 +215,31 @@ jak se louka i rozhraní postupně měnily.</p>
 <p style="color:var(--ink-dim)">Zvíře se nerozhoduje podle scénáře. Každou chvíli si boduje,
 co teď dává největší smysl, a vyhrává nejlepší nápad — proto se dva kusy stejného druhu
 zachovají pokaždé jinak.</p>
-
-<h3 style="margin-top:1.8rem">Smysly a paměť</h3>
 <ul class="plain">
-  <li><b>Zrak</b> má zorný kužel, dosah podle druhu a v noci se krátí. Z kopce je vidět dál,
-      při pastvě se hlava sklání a zvíře vidí míň. Porost a kopce výhled zaclánějí.</li>
-  <li><b>Čich</b> nese vítr: predátora ucítíš proti větru, po větru skoro vůbec. Vodu je cítit
-      násobně dál, než je vidět — proto ji stádo najde, i když na ni nedohlédne.</li>
-  <li><b>Sluch</b> podle hlučnosti: běžící zvíře, lov nebo syčící husa je slyšet i za zády
-      a přes porost. Sojka umí varovat celou louku.</li>
-  <li><b>Paměť</b> míst: kde byla tráva, voda, úkryt — a kde mě honili. Vzpomínky slábnou,
+  <li><b>Zrak</b> má zorný kužel a dosah podle druhu, v noci se krátí. Z kopce je vidět dál,
+      při pastvě se hlava sklání a zvíře vidí míň.</li>
+  <li><b>Čich</b> nese vítr: predátora zvíře ucítí proti větru, po větru skoro vůbec.</li>
+  <li><b>Sluch</b> podle hlučnosti — běžící zvíře nebo lov je slyšet i za zády a přes porost.
+      Sojka umí varovat celou louku.</li>
+  <li><b>Paměť míst</b>: kde byla tráva, voda, úkryt — a kde mě honili. Vzpomínky slábnou,
       ale napajedlo si zvíře pamatuje dlouho, protože rybník se nestěhuje.</li>
-  <li><b>Zvyknutí</b>: na hluk, který se opakuje a nic po něm nepřijde, si zvíře zvykne.</li>
-</ul>
-
-<h3 style="margin-top:1.8rem">Rozmnožování a mláďata</h3>
-<ul class="plain">
-  <li><b>Páry</b> u druhů, které je tvoří (husa, holub, sojka, liška, vlk). Vlčí smečka má
-      jen jeden pár. Vdovec půl dne truchlí, pak si hledá nového partnera.</li>
-  <li><b>Hnízdo</b> je skutečný objekt s vejci — na stromě, u paty stromu, v porostu nebo v noře.
-      Pták na vejcích sedí, potřeby mu rostou pomaleji a odchází, až když už nemůže.
-      Když hnízdo nikdo nehřeje, vejce chladnou. Liška a kočka je vybírají a matka o tom ví.</li>
-  <li><b>Mláďata</b>: koloušek a zajíček první den leží schovaní a matka je chodí navštěvovat.
-      Ptáčata a mláďata šelem se sama neuživí — rodič jim nosí potravu, a když je jich moc,
-      dostane nejdřív ten nejprůbojnější. Sirotek hladoví. Mládě v dešti bez úkrytu prochladne.</li>
-  <li><b>Učení</b>: mládě přebírá od matky, kde je voda, úkryt a kde je nebezpečno.</li>
-  <li><b>Příbuznost</b>: rodokmen se drží a příbuzní se nepáří.</li>
-</ul>
-
-<h3 style="margin-top:1.8rem">Potrava a potřeby</h3>
-<ul class="plain">
-  <li><b>Tráva</b> je skutečná zásoba: spasené místo se dorůstá, v zimě neroste. Stádo,
-      které stojí moc dlouho na jednom místě, si ho vypase.</li>
-  <li><b>Voda</b>: pije se z okraje, velké zvíře dosáhne z břehu dál než husa.
-      Napije se dosyta, ne jen na chvíli. Zamrzlý rybník pití nezastaví, jen zpomalí.</li>
+  <li><b>Tráva je skutečná zásoba.</b> Spasené místo dorůstá, v zimě neroste. Stádo, které
+      stojí moc dlouho na jednom místě, si ho vypase.</li>
+  <li><b>Stádo má vůdkyni</b> — přesun vede nejstarší klisna nebo laň, hřebec jistí zezadu.
+      Krávy se při spatření vlka stáhnou k sobě a postaví se čelem; telata utíkají za matku.</li>
   <li><b>Lov</b>: predátor si vybírá kořist podle druhu, vzdálenosti a toho, jestli je osamělá.
-      Plíží se, útočí zblízka, sprint mu dojde. Husy ho můžou zahnat, když jsou ve skupině.
-      Vlk nechá zbytek úlovku ležet a chodí se k němu vracet.</li>
-  <li><b>Hlad, žízeň, únava, potřeba společnosti, ostražitost, strach a páření</b> rostou různě
-      rychle podle druhu a proti sobě soupeří.</li>
-</ul>
-
-<h3 style="margin-top:1.8rem">Prostředí</h3>
-<ul class="plain">
-  <li><b>Roční období</b>: rok trvá ve výchozím nastavení šestnáct dnů (jde zkrátit i prodloužit). V zimě zamrzne rybník (husy tím ztrácejí
-      útočiště a vlk přejde po ledu), tráva neroste a stromy jsou holé.</li>
-  <li><b>Voda</b> má hloubku: rybníkem neplavec neprojde a obchází ho, mělčinou a brodem projde
-      každý, proud v potoce unáší. Padlá kláda je pro neplavce jediná cesta přes tok.</li>
-  <li><b>Kopce</b> mají místy sráz, který přeleze kočka i koza. Koza se na něm může ukrýt
-      před vlkem. Z vrcholu je dál vidět.</li>
-  <li><b>Vítr a déšť</b> se mění samy a jde je na chvíli převzít. Vítr rozhoduje o čichu.</li>
-</ul>
-
-<h3 style="margin-top:1.8rem">Než se louka rozběhne</h3>
-<ul class="plain">
-  <li><b>Nová louka</b>: vybereš krajinu, velikost, startovní sadu zvířat a seed — a rovnou vidíš
-      náhled mapy, která se spustí. Rozehraná hra se ukládá sama, takže „Pokračovat“ tě vrátí,
-      kde jsi skončil.</li>
-  <li><b>Nastavení</b>: rozlišení okna, velikost UI, celá obrazovka, svislá synchronizace, strop snímků, hlasitost, štítky,
-      ukazatele smyslů, proudění větru a délka dne i roku.</li>
-  <li><b>Životopis</b>: u vybraného zvířete je záložka Život — kdy se narodilo, kdy dospělo,
+      Plíží se, útočí zblízka, sprint mu dojde. Úlovek dojídá a vrací se k němu, i když je
+      sto metrů daleko.</li>
+  <li><b>Hnízdo</b> je skutečný objekt s vejci. Pták na nich sedí, liška a kočka je vybírají
+      a matka o tom ví.</li>
+  <li><b>Mláďata</b>: koloušek a zajíček první den leží schovaní a matka je chodí navštěvovat.
+      Ptáčatům nosí potravu rodič — a když je jich moc, dostane nejdřív ten nejprůbojnější.
+      Rodokmen se drží a příbuzní se nepáří.</li>
+  <li><b>Roční období</b>: rok trvá šestnáct dnů. V zimě zamrzne rybník — husy tím ztrácejí
+      útočiště a vlk přejde po ledu — tráva neroste a stromy jsou holé.</li>
+  <li><b>Krajina rozhoduje</b>: rybníkem neplavec neprojde a obchází ho, přes potok vede brod
+      nebo padlá kláda, kopec má místy sráz jen pro lezce a z vrcholu je dál vidět.</li>
+  <li><b>Rozehraná hra se ukládá sama</b> a u každého zvířete je záložka Život: kdy se narodilo,
       kolik přečkalo zim, koho potkalo a o co přišlo.</li>
 </ul>
 
